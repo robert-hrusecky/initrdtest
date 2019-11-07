@@ -18,6 +18,6 @@ int main()
 
     ukplat_memregion_get(1, &desc);
     printf("initrd_size: %ld\n", desc.len);
-    uk_hexdumpCd(desc.base, 27);
+    uk_hexdumpCd(desc.base, desc.len);
     return 0;
 }
