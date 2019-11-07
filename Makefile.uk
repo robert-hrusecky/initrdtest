@@ -1,6 +1,3 @@
 $(eval $(call addlib,appinitrdtest))
 
-APPINITRDTEST_PATCHDIR=$(APPINITRDTEST_BASE)/patches
-$(eval $(call patch,appinitrdtest,$(APPINITRDTEST_PATCHDIR),$(APPINITRDTEST_ZIPNAME)))
-
 APPINITRDTEST_SRCS-y += $(APPINITRDTEST_BASE)/main.c
