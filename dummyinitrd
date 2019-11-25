@@ -1,3 +1,11 @@
 linuxu.initrd_file="dummyinitrd" --
 
 clear; clear; make && build/initrdtest_linuxu-x86_64 linuxu.initrd_file="initrd_test_test_test.cpio" --
+
+Add memregion code to Xen
+Wrap everything in ifdefs
+Move initramfs_init to rootfs.c in vfscore
+    loop through memregions, check for a cpio memregion
+    pass memregion in to our function
+Wrap this in ifdefs too
+Build the lua application to test functionality
