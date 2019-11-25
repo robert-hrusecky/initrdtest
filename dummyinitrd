@@ -1,1 +1,3 @@
 linuxu.initrd_file="dummyinitrd" --
+
+clear; clear; make && build/initrdtest_linuxu-x86_64 linuxu.initrd_file="initrd_test_test_test.cpio" --
