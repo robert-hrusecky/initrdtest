@@ -7,7 +7,8 @@
 #include <uk/initramfs.h>
 #include <uk/hexdump.h>
 #include <uk/alloc.h>
-
+#include <uk/json_frontend.h>
+#include <string.h>
 int main()
 {
 
@@ -23,5 +24,12 @@ int main()
 
     initramfs_init(&desc);
     //uk_hexdumpCd(desc.base, 110);
+
+
+
+    const char* test = "{ \"message\" : \"Hello, world!\"  }";
+    struct json_value* json = parse_json(test, strlen(test));
+    printf("json : %p\n", json);
+
     return 0;
 }
