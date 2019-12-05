@@ -25,6 +25,7 @@ int main()
     if (read(fd, &buf[0], 100) < 0) {
         return -2;
     }
+    buf[100] = '\0';
     printf("The message in testile is: %s", buf);
     return 0;
 }
